@@ -1,0 +1,77 @@
+{
+        "position": "bottom",
+        "height": 50,
+        "margin-bottom": 20,
+        "margin-left": 80,
+        "margin-right": 80,
+        "spacing": 10,
+        "modules-left": ["custom/spotify", "custom/weather"],
+        "modules-center": ["sway/workspaces"],
+        "modules-right": ["memory", "pulseaudio", "clock"],
+
+        "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "persistent_workspaces": {
+                "1": [],
+                "2": [],
+                "3": [],
+                "4": [],
+                "5": [],
+                "6": []
+        },
+        "format-icons": {
+                "1": "<span foreground='#c49ec4' font='13'></span>",
+                "2": "<span foreground='#9ec4c3' font='13'></span>",
+                "3": "<span foreground='#e7e7e7' font='13'></span>",
+                "4": "<span foreground='#ceb188' font='13'></span>",
+                "5": "<span foreground='#9ec49f' font='13'></span>",
+                "6": "<span foreground='#a39ec4' font='13'></span>"
+        }
+        },
+        "tray": {
+                "icon-size": 23,
+                "spacing": 10
+        },
+        "clock": {
+                "format": "<span font='13'></span>  {:%H:%M}",
+                "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+                "format-alt": "<span font='13'></span>  {:%H:%M  ~  %A,  %d/%m}"
+        }, 
+        "memory": {
+                "format": "<span font='13'></span>  {used:0.1f}GiB",
+                "tooltip-format": "Memory {}% used"
+        },
+        "cpu": {
+                "interval": 10,
+                "format": "<span font='13'></span>  {}%",
+                "max-length": 10
+        },
+        "pulseaudio": {
+                "format": "<span font='13' rise='0pt'>{icon}</span>  {volume}%",
+                "format-muted": "<span font='13'></span>  Muted",
+                "format-icons": {
+                        "default": ["", ""]
+                },
+                "scroll-step": 5,
+                "on-click": "volume toggle",
+                "on-click-right": "pavucontrol"
+        },
+        "custom/spotify": {
+                "exec": "python3 ~/.config/waybar/scripts/player.py --player spotify",
+                "format": "<span font='13'></span>  {}",
+                "return-type": "json",
+                "max-length": 30,
+                "on-click": "playerctl play-pause",
+                "on-scroll-up": "playerctl next",
+                "on-scroll-down": "playerctl previous"
+        },
+        "custom/weather": {
+                "exec": "python3 ~/.config/waybar/scripts/weather.py",
+                "restart-interval": 300,
+                "return-type": "json",
+                "format": "<span font='13'>{}</span>",
+                "format-alt": "{alt}"
+        }    
+}

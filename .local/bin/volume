@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR="$HOME/.config/dunst/mountain"
+DIR="$HOME/.config/dunst/icons"
 
 function get_volume {
       amixer -D pipewire get Master | grep '%' | head -n 1 | awk -F'[' '{print $2}' | awk -F'%' '{print $1}'

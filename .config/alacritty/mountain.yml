@@ -3,6 +3,10 @@ colors:
     background: '0x0f0f0f'
     foreground: '0xe7e7e7'
 
+  cursor:
+    text: '0x0f0f0f'
+    cursor: '0xc49ec4'
+
   normal:
     black:   '0x262626'
     red:     '0xac8a8c'
@@ -22,3 +26,7 @@ colors:
     magenta: '0xc49ec4'
     cyan:    '0x9ec3c4'
     white:   '0xf5f5f5'
+
+indexed_colors:
+    - { index: 16, color: '0xceb188' }
+    - { index: 17, color: '0xcacaca' }

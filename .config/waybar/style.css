@@ -4,68 +4,61 @@
     border: none;
     border-radius: 12px;
     min-height: 0;
+    font-family: "JetBrains Mono", "Font Awesome 6 Pro Solid";
+    font-size: 15px;
 }
 
 window#waybar {
     background: transparent;
-    font-family: "Source Han Sans Medium", "Font Awesome 6 Pro Solid";
-    font-size: 15px;
+    font-weight: bold; 
+}
+
+tooltip {
+    background: @menu;
+    border-radius: 12px;
+}
+tooltip label {
+    color: @white1;
 }
 
 #workspaces {
     background: @black;
     color: @black;
-    padding: 0px 20px 0px 20px;
+    padding: 0 20px;
 }
-
 #workspaces button {
     background: @black;
     color: @black;
     padding: 0px;
     border-radius: 12px;
 }
-
 #workspaces button:hover {
-    background: @black2;
-    color: @black2;
-    border-radius: 12px;
-}
-
-#workspaces button.focused {
-    background: @black;
+    background: @black1;
+    color: @black1;
     border-radius: 12px;
     border-bottom: 8px solid transparent;
 }
-
+#workspaces button.focused {
+    background: @black;
+    border-radius: 12px;
+}
 #workspaces button.urgent {
     background: @black2;
     border-radius: 24px;
-    border-top: 8px solid transparent;
-}
-
-tooltip {
-    background: @menu;
-    border-radius: 4px;
-}
-tooltip label {
-    color: @white1;
 }
 
 #tray {
     background-color: @white1;
-    padding: 1px 25px 0px 25px;
+    padding: 0 30px;
 }
-
 #tray menu {
-    background: rgba(30, 30, 46, 0.9);
+    background: @menu;
     color: @white1;
     border-radius: 10px;
 }
-
 #tray menu menuitem {
     border-radius: 0px;
 }
-
 #tray menu menuitem:hover {
     color: @white;
     background: @black1;
@@ -75,27 +68,26 @@ tooltip label {
 #clock {
     background: @black;
     color: @white1;
-    padding: 0px 30px 0px 30px;
+    padding: 0 30px;
 }
 
 #memory {
     background: @black;
     color: @yellow;
-    padding: 0px 30px 0px 30px;
+    padding: 0 30px;
 }
 
 #cpu {
     background: @black;
     color: @green;
-    padding: 0px 30px 0px 30px;
+    padding: 0 30px;
 }
 
 #pulseaudio {
     background: @black;
     color: @blue;
-    padding: 0px 30px 0px 30px;
+    padding: 0 30px;
 }
-
 #pulseaudio.muted {
     color: @pink
 }
@@ -103,22 +95,25 @@ tooltip label {
 #custom-spotify {
     background: @black;
     color: @green;
-    padding: 0px 30px 0px 30px;
+    padding: 0 30px;
+}
+
+#custom-pacman {
+    background: @black;
+    color: @yellow;
+    padding: 0 30px;
 }
 
 #custom-weather {
     background: @black;
-    padding: 0px 32px 0px 30px;
+    padding: 0 30px;
 }
-
 #custom-weather.severe {
     color: @pink;
 }
-
 #custom-weather.sunnyDay {
     color: @yellow;
 }
-
 #custom-weather.rainyDay, 
 #custom-weather.rainyNight,
 #custom-weather.clearNight,
@@ -126,7 +121,6 @@ tooltip label {
 #custom-weather.cloudyFoggyNight {
     color: @blue;
 }
-
 #custom-weather.showyIcyDay, 
 #custom-weather.snowyIcyNight,
 #custom-weather.default {

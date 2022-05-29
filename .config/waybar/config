@@ -1,18 +1,27 @@
 {
-        "position": "bottom",
+        "position": "top",
         "height": 50,
-        "margin-bottom": 20,
+        "margin-top": 20,
         "margin-left": 80,
         "margin-right": 80,
         "spacing": 10,
-        "modules-left": ["custom/spotify", "custom/weather"],
+        "ipc": true,
+        "modules-left": ["custom/spotify", "custom/weather", "custom/pacman"],
         "modules-center": ["sway/workspaces"],
-        "modules-right": ["memory", "pulseaudio", "clock"],
+        "modules-right": ["cpu", "memory", "pulseaudio", "clock"],
 
         "sway/workspaces": {
-        "disable-scroll": false,
-        "all-outputs": true,
-        "format": "{icon}",
+                "disable-scroll": false,
+                "all-outputs": true,
+                "format": "{icon}",
+                "format-icons": {
+                        "1": "<span foreground='#c49ec4' font='13'></span>",
+                        "2": "<span foreground='#9ec4c3' font='13'></span>",
+                        "3": "<span foreground='#c49ea0' font='13'></span>",
+                        "4": "<span foreground='#ceb188' font='13'></span>",
+                        "5": "<span foreground='#9ec49f' font='13'></span>",
+                        "6": "<span foreground='#a39ec4' font='13'></span>"
+                },
         "persistent_workspaces": {
                 "1": [],
                 "2": [],
@@ -20,14 +29,6 @@
                 "4": [],
                 "5": [],
                 "6": []
-        },
-        "format-icons": {
-                "1": "<span foreground='#c49ec4' font='13'></span>",
-                "2": "<span foreground='#9ec4c3' font='13'></span>",
-                "3": "<span foreground='#e7e7e7' font='13'></span>",
-                "4": "<span foreground='#ceb188' font='13'></span>",
-                "5": "<span foreground='#9ec49f' font='13'></span>",
-                "6": "<span foreground='#a39ec4' font='13'></span>"
         }
         },
         "tray": {
@@ -35,22 +36,22 @@
                 "spacing": 10
         },
         "clock": {
-                "format": "<span font='13'></span>  {:%H:%M}",
-                "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-                "format-alt": "<span font='13'></span>  {:%H:%M  ~  %A,  %d/%m}"
+                "format": "<span font='13'></span> {:%H:%M}",
+                "format-alt": "<span font='13'></span> {:%H:%M ~ %A, %d/%m}",
+                "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
         }, 
         "memory": {
-                "format": "<span font='13'></span>  {used:0.1f}GiB",
+                "format": "<span font='13'></span> {used:0.1f}GiB",
                 "tooltip-format": "Memory {}% used"
         },
         "cpu": {
                 "interval": 10,
-                "format": "<span font='13'></span>  {}%",
+                "format": "<span font='13'></span> {usage}%",
                 "max-length": 10
         },
         "pulseaudio": {
-                "format": "<span font='13' rise='0pt'>{icon}</span>  {volume}%",
-                "format-muted": "<span font='13'></span>  Muted",
+                "format": "<span font='13' rise='-1pt'>{icon}</span> {volume}%",
+                "format-muted": "<span font='13'></span> Muted",
                 "format-icons": {
                         "default": ["", ""]
                 },
@@ -59,19 +60,33 @@
                 "on-click-right": "pavucontrol"
         },
         "custom/spotify": {
-                "exec": "python3 ~/.config/waybar/scripts/player.py --player spotify",
-                "format": "<span font='13'></span>  {}",
+                "exec": "~/.config/waybar/scripts/player.py 2> /dev/null",
+                "exec-if": "pgrep spotify",
+                "format": "<span font='13'>{icon}</span> {}",
+                "format-icons": [""],
+                "escape": true,
                 "return-type": "json",
-                "max-length": 30,
-                "on-click": "playerctl play-pause",
-                "on-scroll-up": "playerctl next",
-                "on-scroll-down": "playerctl previous"
-        },
+                "max-length": 40,
+                "on-click": "playerctl -p spotify play-pause",
+                "on-click-right": "killall spotify",
+                "on-scroll-up" : "playerctl -p spotify next",
+                "on-scroll-down" : "playerctl -p spotify previous"
+                       },
         "custom/weather": {
                 "exec": "python3 ~/.config/waybar/scripts/weather.py",
                 "restart-interval": 300,
                 "return-type": "json",
-                "format": "<span font='13'>{}</span>",
+                "format": "{}",
                 "format-alt": "{alt}"
-        }    
+        },
+        "custom/pacman": {
+                "exec": "checkupdates | wc -l",
+                "exec-if": "exit 0",
+                "format": "<span font='13'></span> {}",
+                "interval": 3600, 
+                "signal": 8,
+                "on-click": "alacritty"
+        }
 }
+
+// vim:ft=json

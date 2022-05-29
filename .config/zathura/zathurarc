@@ -1,4 +1,4 @@
-include catppuccin
+include mountain
 set selection-clipboard clipboard
 set window-title-home-tilde true
 set statusbar-home-tilde true

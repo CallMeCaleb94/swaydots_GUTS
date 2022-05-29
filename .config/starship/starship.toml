@@ -14,16 +14,20 @@ format = "[$hostname](bold blue) "
 disabled = false
 
 [directory]
-disabled = false
+truncation_length = 5
+format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 [line_break]
 disabled = true
 
 [lua]
-symbol = "[](blue) "
-
-[git_status]
-disabled = false
+symbol = "[󰢱 ](blue) "
 
 [git_branch]
-disabled = false
+disabled = true
+format = "[$symbol$branch]($style) "
+symbol = "󰮭  "
+style = "bold yellow"
+
+[git_status]
+disabled = true

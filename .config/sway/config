@@ -146,8 +146,7 @@ bindsym Print exec dripshot full
 bindsym $mod+Print exec dripshot crop
 
 # Restart Waybar
-bindsym $mod+bracketright exec killall waybar && sleep 0.3 && waybar &
-bindsym $mod+shift+bracketright exec waybar &
+bindsym $mod+bracketright exec ~/.config/waybar/launch.sh &
 
 # Restart Dunst
 bindsym $mod+bracketleft exec ~/.config/dunst/launch.sh
@@ -169,7 +168,7 @@ for_window [title="."] title_format " %title"
 for_window [title="^float$"] floating enable
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable
 for_window [title="(?:Choose Files)"] floating enable
-for_window [title="(?:Copying files to)"] floating enable
+for_window [title="(?:Copying)"] floating enable
 for_window [title="mpv"] floating enable, resize set 900 600
 for_window [class="Lxappearance"] floating enable
 for_window [class="Viewnior"] floating enable
@@ -188,32 +187,31 @@ seat seat0 xcursor_theme WhiteSur-cursors 27
 
 # Gaps and borders
 gaps inner 10
-gaps outer 30
-gaps bottom 20
-default_border pixel 4
+gaps outer 40
+gaps top 20
+default_border pixel 5
 default_floating_border pixel 2 
 
 # Window Colors
 set $unfocused  #262626
 set $normal     #c49ec4
-set $inactive   #262626
-set $text       #0f0f0f
+set $inactive   #191919
 
-# colors                border     bg         text    indicator  chld_brdr
-client.focused          $normal    $normal    $text   $normal    $normal
-client.focused_inactive $inactive  $inactive  $text   $inactive  $inactive
-client.unfocused        $unfocused $unfocused $normal $unfocused $unfocused
+# colors                border     bg         text      indicator  chld_brdr
+client.focused          $normal    $normal    $inactive $normal    $normal
+client.focused_inactive $inactive  $inactive  $normal   $inactive  $inactive
+client.unfocused        $unfocused $unfocused $normal   $unfocused $unfocused
 
-font pango:Iosevka Nerd Font Medium 14px
+font pango:JetBrains Mono 15px
 
 # Autostart
 exec xwayland enable
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec_always ~/.config/gtk-3.0/import-gsettings.sh &
-exec swaybg -i ~/Pictures/Wallpapers/Mountain/eren-mountain.png -m fill &
+exec swaybg -i ~/Pictures/Wallpapers/day.png -m fill &
 exec gsettings set org.gnome.desktop.wm.preferences button-layout ""
-exec waybar &
+exec ~/.config/waybar/launch.sh &
 exec dunst &
 exec xrdb -merge ~/.Xresources &
 exec wl-paste --watch cliphist store &

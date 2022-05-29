@@ -1,8 +1,8 @@
 [global]
 width = (100, 350)
 height = 150
-origin = "top-right"
-offset = "20x20"
+origin = "bottom-right"
+offset = "30x35"
 notification_limit = 4
 shrink = yes
 transparency = 0
@@ -11,7 +11,7 @@ padding = 12
 horizontal_padding = 12
 
 frame_width = 3
-frame_color = "#DDB6F2"
+frame_color = "#c49ec4"
 
 corner_radius = 12
 
@@ -22,9 +22,9 @@ progress_bar_min_width = 0
 progress_bar_max_width = 300
 progress_bar_frame_width = 0
 
-font = "Roboto Medium 10"
+font = "Sarasa Mono CL Semibold 10"
 
-format = "<span size='x-large' font_desc='Iosevka Nerd Font 9' weight='Bold' foreground='#DDB6F2'>%s</span>\n%b"
+format = "<span size='x-large' font_desc='Sarasa Mono CL 9' weight='Bold' foreground='#c49ec4'>%s</span>\n%b"
 
 alignment = center
 markup = full

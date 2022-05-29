@@ -14,7 +14,7 @@ weather_icons = {
     'rainyNight': '',
     'snowyIcyDay': '',
     'snowyIcyNight': '',
-    'severe': '',
+    'severe': '',
     'default': ''
 }
 
@@ -60,7 +60,7 @@ temp_max = html_data(
     ".CurrentConditions--tempHiLoValue--3SUHy > span:nth-child(1)").text()
 temp_min = html_data(
     ".CurrentConditions--tempHiLoValue--3SUHy > span:nth-child(2)").text()
-temp_min_max = f' {temp_min}   ~    {temp_max}C'
+temp_min_max = f' {temp_min}C /  {temp_max}C'
 
 # temperature distribution (day)
 temp_morning = html_data(
@@ -105,13 +105,13 @@ humidity_text = f' {humidity}'
 
 # tooltip text
 tooltip_text = str.format(
-    '{}\n\n{}\n{}\n{}\n{}\n{}',
-    f'<span size="x-large" font_desc="Font Awesome 6 Pro Solid">{icon}</span><span size="large">  {temp}C</span> ',
+    '\n{}\n{}\n{}\n{}\n{}\n{}\n',
+    f'<span size="x-large" font_desc="Font Awesome 6 Pro Solid 15">{icon}</span><span font="14"> {temp}C</span> ',
     f'<big>{status}</big>',
-    f'<span size="small">{temp_feel_text}</span>',
-    f'<span size="small">{temp_min_max}</span>',
-    f'<span size="small">{wind_text}</span>',
-    f'<span size="small">{humidity_text}</span>',
+    f'<span size="medium">{temp_feel_text}</span>',
+    f'<span size="medium">{temp_min_max}</span>',
+    f'<span size="medium">{wind_text}</span>',
+    f'<span size="medium">{humidity_text}</span>',
     f'<i>{prediction}</i>',
 )
 
@@ -119,7 +119,7 @@ tooltip_text = str.format(
 
 # print waybar module data
 out_data = {
-    'text': f'{icon} <span font="11">{temp}C</span>',
+    'text': f'<span font="13">{icon}</span> <span weight="bold" font="12">{temp}C</span>',
     'alt': status,
     'tooltip': tooltip_text,
     'class': status_code

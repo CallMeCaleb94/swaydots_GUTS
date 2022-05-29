@@ -2,7 +2,7 @@
 
 confdir="${XDG_CONFIG_HOME:=$HOME/.config}/discocss"
 preloadFile="$confdir/preload.js"
-cssFile="$confdir/mountain2.css"
+cssFile="$confdir/mountain.css"
 
 mkdir -p "$confdir"
 

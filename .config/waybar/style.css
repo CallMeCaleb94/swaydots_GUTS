@@ -29,8 +29,8 @@ tooltip label {
 #workspaces button {
     background: @black;
     color: @black;
-    padding: 0px;
     border-radius: 12px;
+    padding: 0;
 }
 #workspaces button:hover {
     background: @black1;
@@ -49,7 +49,6 @@ tooltip label {
 
 #tray {
     background-color: @white1;
-    padding: 0 30px;
 }
 #tray menu {
     background: @menu;
@@ -62,12 +61,11 @@ tooltip label {
 #tray menu menuitem:hover {
     color: @white;
     background: @black1;
-    border-radius: 0px;
 }
 
 #clock {
     background: @black;
-    color: @white1;
+    color: @white2;
     padding: 0 30px;
 }
 
@@ -89,7 +87,7 @@ tooltip label {
     padding: 0 30px;
 }
 #pulseaudio.muted {
-    color: @pink
+    color: @pink;
 }
 
 #custom-spotify {

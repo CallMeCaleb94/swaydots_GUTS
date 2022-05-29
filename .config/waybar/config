@@ -61,8 +61,7 @@
                 "on-click-right": "pavucontrol"
         },
         "custom/spotify": {
-                "exec": "~/.config/waybar/scripts/player.py 2> /dev/null",
-                "exec-if": "pgrep spotify",
+                "exec": "~/.config/waybar/scripts/player.py --player spotify",
                 "format": "<span font='13'>{icon}</span>{}",
                 "format-icons": [""],
                 "escape": true,
@@ -72,7 +71,7 @@
                 "on-click-right": "killall spotify",
                 "on-scroll-up" : "playerctl -p spotify next",
                 "on-scroll-down" : "playerctl -p spotify previous"
-                       },
+        },
         "custom/weather": {
                 "exec": "python3 ~/.config/waybar/scripts/weather.py",
                 "restart-interval": 300,

@@ -46,7 +46,7 @@
         },
         "cpu": {
                 "interval": 10,
-                "format": "<span font='13'></span> {usage}%",
+                "format": "<span font='14'></span> {usage}%",
                 "max-length": 10
         },
         "pulseaudio": {

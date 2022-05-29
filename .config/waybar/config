@@ -17,10 +17,11 @@
                 "format-icons": {
                         "1": "<span foreground='#c49ec4' font='13'></span>",
                         "2": "<span foreground='#9ec4c3' font='13'></span>",
-                        "3": "<span foreground='#c49ea0' font='13'></span>",
-                        "4": "<span foreground='#ceb188' font='13'></span>",
-                        "5": "<span foreground='#9ec49f' font='13'></span>",
-                        "6": "<span foreground='#a39ec4' font='13'></span>"
+                        "3": "<span foreground='#ceb188' font='13'></span>",
+                        "4": "<span foreground='#c49ea0' font='13'></span>",
+                        "5": "<span foreground='#a39ec4' font='13'></span>",
+                        "6": "<span foreground='#9ec49f' font='13'></span>"
+
                 },
         "persistent_workspaces": {
                 "1": [],

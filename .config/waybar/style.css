@@ -40,7 +40,8 @@ tooltip label {
 }
 #workspaces button.focused {
     background: @black;
-    border-radius: 12px;
+    border-bottom: 2px solid @white2;
+    border-radius: 0;
 }
 #workspaces button.urgent {
     background: @black2;

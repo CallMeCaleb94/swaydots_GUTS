@@ -53,7 +53,7 @@ prediction = f'\n\n   {prediction}' if len(prediction) > 0 else prediction
 
 # temperature feels like
 temp_feel = html_data(".TodayDetailsCard--feelsLikeTempValue--Cf9Sl").text()
-temp_feel_text = f'Feels like {temp_feel}c'
+temp_feel_text = f'Feels like {temp_feel}C'
 
 # min-max temperature
 temp_max = html_data(
@@ -119,7 +119,7 @@ tooltip_text = str.format(
 
 # print waybar module data
 out_data = {
-    'text': f'<span font="13">{icon}</span> <span weight="bold" font="12">{temp}C</span>',
+    'text': f'<span font="13">{icon}</span> <span weight="500" font="12">{temp}C</span>',
     'alt': status,
     'tooltip': tooltip_text,
     'class': status_code

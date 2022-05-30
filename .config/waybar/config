@@ -1,7 +1,7 @@
 {
-        "position": "top",
+        "position": "bottom",
         "height": 50,
-        "margin-top": 20,
+        "margin-bottom": 20,
         "margin-left": 80,
         "margin-right": 80,
         "spacing": 10,

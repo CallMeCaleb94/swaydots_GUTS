@@ -4,13 +4,13 @@
     border: none;
     border-radius: 12px;
     min-height: 0;
-    font-family: "JetBrains Mono", "Font Awesome 6 Pro Solid";
-    font-size: 15px;
+    font-family: "Sarasa Mono CL Semibold", "Font Awesome 6 Pro Solid";
+    font-size: 17px;
 }
 
 window#waybar {
     background: transparent;
-    font-weight: 500; 
+    color: @black;
 }
 
 tooltip {
@@ -25,8 +25,8 @@ tooltip label {
     background: @black;
     color: @black;
     padding: 0 20px;
-}
-#workspaces button {
+  }
+  #workspaces button {
     background: @black;
     color: @black;
     border-radius: 12px;
@@ -39,9 +39,8 @@ tooltip label {
     border-bottom: 8px solid transparent;
 }
 #workspaces button.focused {
-    background: @black;
-    border-bottom: 2px solid @white2;
-    border-radius: 0;
+    background: @black1;
+    border-radius: 12;
 }
 #workspaces button.urgent {
     background: @black2;
@@ -72,7 +71,7 @@ tooltip label {
 
 #memory {
     background: @black;
-    color: @yellow;
+    color: @orange;
     padding: 0 30px;
 }
 

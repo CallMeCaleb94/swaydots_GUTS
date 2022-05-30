@@ -72,7 +72,7 @@
                 "on-scroll-down" : "playerctl -p spotify previous"
         },
         "custom/weather": {
-                "exec": "python3 ~/.config/waybar/scripts/weather.py",
+                "exec": "~/.config/waybar/scripts/weather.py",
                 "restart-interval": 300,
                 "return-type": "json",
                 "format": "{}",

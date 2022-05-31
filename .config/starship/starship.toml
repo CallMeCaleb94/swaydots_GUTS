@@ -24,10 +24,15 @@ disabled = true
 symbol = "[󰢱 ](blue) "
 
 [git_branch]
-disabled = true
+disabled = false
 format = "[$symbol$branch]($style) "
-symbol = "󰮭  "
+symbol = "󱃷  "
 style = "bold yellow"
 
 [git_status]
-disabled = true
+conflicted = "󰈻 "
+up_to_date = "󰸞 "
+untracked = "󰷌 "
+modified = "󰏪 "
+renamed = "󱇧 "
+deleted = "󰆴 "

@@ -4,7 +4,7 @@ swaylock \
     --screenshots \
     --clock \
     --indicator \
-    --indicator-radius 140 \
+    --indicator-radius 120 \
     --timestr '%R' \
     --datestr '%A, %d %B' \
     --indicator-thickness 10 \

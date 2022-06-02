@@ -1,5 +1,5 @@
 #! /bin/zsh
-SHELL=$(which zsh || echo '/bin/zsh')
+SHELL='/usr/bin/zsh'
 
 colorscript -r 
 fpath=(usr/share/zsh/site-functions $fpath)
@@ -63,11 +63,11 @@ eval "$(starship init zsh)"
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 # alias
-alias ..="cd .."
-alias mkdir="mkdir -pv"
-alias ls="logo-ls"
-alias l="logo-ls -lA"
-alias cat="bat --color always --theme base16 --plain"
+alias ..='cd ..'
+alias mkdir='mkdir -pv'
+alias ls='logo-ls'
+alias l='logo-ls -lA'
+alias cat='bat --color always --theme base16 --plain'
 alias grep='grep --color=auto'
 alias v='nvim'
 alias vim='nvim'

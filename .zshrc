@@ -52,6 +52,7 @@ setopt share_history          # share command history data
 # source plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 cd() {
     builtin cd "$@" && command logo-ls -A
@@ -77,6 +78,7 @@ alias rm='rm -rfv'
 alias gc='git clone'
 alias q='exit'
 alias rx='clear ; rxfetch'
+alias hist='zsh-history-substring search'
 
 alias zshrc='nvim $HOME/.zshrc'
 alias xresources='nvim $HOME/.Xresources'

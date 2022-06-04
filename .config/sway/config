@@ -188,7 +188,6 @@ seat seat0 xcursor_theme WhiteSur-cursors 27
 # Gaps and borders
 gaps inner 10
 gaps outer 40
-gaps bottom 20
 default_border pixel 5
 default_floating_border pixel 2 
 

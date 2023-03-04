@@ -77,7 +77,7 @@ alias cp='cp -rv'
 alias rm='rm -rfv'
 alias gc='git clone'
 alias q='exit'
-alias rx='clear ; rxfetch'
+alias rx='clear ; xltt'
 alias hist='zsh-history-substring search'
 
 alias zshrc='nvim $HOME/.zshrc'

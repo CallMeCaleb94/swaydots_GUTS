@@ -1,3 +1,5 @@
+output HDMI-A-1 mode 1920x1080@74.973Hz position 0,0
+
 ### Variables
 
 set $mod Mod4
@@ -208,7 +210,7 @@ exec xwayland enable
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec_always ~/.config/gtk-3.0/import-gsettings.sh &
-exec swaybg -i ~/Pictures/Wallpapers/eye-mountain.png -m fill &
+exec swaybg -i ~/Pictures/wallpapers/eren-mountain.png -m fill &
 exec gsettings set org.gnome.desktop.wm.preferences button-layout ""
 exec ~/.config/waybar/launch.sh &
 exec dunst &

@@ -17,7 +17,7 @@
                 "format-icons": {
                         "1": "<span foreground='#c49ec4'></span>",
                         "2": "<span foreground='#9ec4c3'></span>",
-                        "3": "<span foreground='#ceb188'></span>",
+                        "3": "<span foreground='#ceb188'></span>",
                         "4": "<span foreground='#c49ea0'></span>",
                         "5": "<span foreground='#a39ec4'></span>",
                         "6": "<span foreground='#9ec49f'></span>"
@@ -65,7 +65,7 @@
                 "format-icons": [""],
                 "escape": true,
                 "return-type": "json",
-                "max-length": 30,
+                "max-length": 35,
                 "on-click": "playerctl -p spotify play-pause",
                 "on-click-right": "killall spotify",
                 "on-scroll-up" : "playerctl -p spotify next",

@@ -66,7 +66,7 @@ entry {
     placeholder-color:              #a0a0a0;
     expand:                         true;
     horizontal-align:               0;
-    placeholder:                    "Search";
+    placeholder:                    "";
     padding:                        0.4% 0% 0% 0%;
     blink:                          true;
 }

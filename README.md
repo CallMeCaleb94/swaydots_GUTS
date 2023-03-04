@@ -1,4 +1,3 @@
-![desktop images](Screenshots/10.png)
-
+![desktop images](screenshots/eren.png)
 
 [Telegram Desktop Theme](https://t.me/addtheme/Moutain_sauce)

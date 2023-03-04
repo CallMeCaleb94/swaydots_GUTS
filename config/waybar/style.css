@@ -1,0 +1,126 @@
+@import "mountain.css";
+
+* {
+    border: none;
+    border-radius: 12px;
+    min-height: 0;
+    font-family: "Sarasa Mono CL Semibold", "Font Awesome 6 Pro Solid";
+    font-size: 17px;
+}
+
+window#waybar {
+    background: transparent;
+    color: @black;
+}
+
+tooltip {
+    background: @menu;
+    border-radius: 12px;
+}
+tooltip label {
+    color: @white1;
+}
+
+#workspaces {
+    background: @black;
+    color: @black;
+    padding: 0 20px;
+  }
+  #workspaces button {
+    background: @black;
+    color: @black;
+    border-radius: 12px;
+    padding: 0;
+}
+#workspaces button:hover {
+    background: @black1;
+    color: @black1;
+    border-radius: 12px;
+    border-bottom: 8px solid transparent;
+}
+#workspaces button.focused {
+    background: @black1;
+    border-radius: 12;
+}
+#workspaces button.urgent {
+    background: @black2;
+    border-radius: 24px;
+}
+
+#tray {
+    background-color: @white1;
+}
+#tray menu {
+    background: @menu;
+    color: @white1;
+    border-radius: 10px;
+}
+#tray menu menuitem {
+    border-radius: 0px;
+}
+#tray menu menuitem:hover {
+    color: @white;
+    background: @black1;
+}
+
+#clock {
+    background: @black;
+    color: @white2;
+    padding: 0 30px;
+}
+
+#memory {
+    background: @black;
+    color: @orange;
+    padding: 0 30px;
+}
+
+#cpu {
+    background: @black;
+    color: @green;
+    padding: 0 30px;
+}
+
+#pulseaudio {
+    background: @black;
+    color: @blue;
+    padding: 0 30px;
+}
+#pulseaudio.muted {
+    color: @pink;
+}
+
+#custom-spotify {
+    background: @black;
+    color: @green;
+    padding: 0 30px;
+}
+
+#custom-pacman {
+    background: @black;
+    color: @yellow;
+    padding: 0 30px;
+}
+
+#custom-weather {
+    background: @black;
+    padding: 0 30px;
+}
+#custom-weather.severe {
+    color: @pink;
+}
+#custom-weather.sunnyDay {
+    color: @yellow;
+}
+#custom-weather.rainyDay, 
+#custom-weather.rainyNight,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay, 
+#custom-weather.cloudyFoggyNight {
+    color: @blue;
+}
+#custom-weather.showyIcyDay, 
+#custom-weather.snowyIcyNight,
+#custom-weather.default {
+    color: @white1;
+}

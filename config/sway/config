@@ -193,7 +193,7 @@ default_floating_border pixel 2
 
 # Window Colors
 set $unfocused  #262626
-set $normal     #c49ec4
+set $normal     #4c4c4c
 set $inactive   #191919
 
 # colors                border     bg         text      indicator  chld_brdr

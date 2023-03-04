@@ -30,78 +30,77 @@ location_id='939c4e0c4d6f9ed89b8e63b7fae028fe84c1a3b58eb79c27e361fd1051c0fcd2'
 
 # get html page
 url = "https://weather.com/en-IN/weather/today/l/" + location_id
-html_data = PyQuery(url)
+html_data = PyQuery(url=url)
 
 # current temperature
-temp = html_data(".CurrentConditions--tempValue--3a50n").text()
+temp = html_data("span[data-testid='TemperatureValue']").eq(0).text()
+# print(temp)
 
 # current status phrase
-status = html_data(".CurrentConditions--phraseValue--2Z18W").text()
-status = f'{status[:16]}..' if len(status) > 17 else status
+status = html_data("div[data-testid='wxPhrase']").text()
+status = f"{status[:16]}.." if len(status) > 17 else status
+# print(status)
 
 # status code
-status_code = html_data("#regionHeader").attr(
-    'class').split(' ')[2].split('-')[2]
+status_code = html_data("#regionHeader").attr("class").split(" ")[2].split("-")[2]
+# print(status_code)
 
 # status icon
-icon = weather_icons[status_code] if status_code in weather_icons else weather_icons['default']
-
-# prediction phrase
-prediction = html_data(".CurrentConditions--precipValue--3nxCj").text()
-prediction = prediction.replace('chance of rain', ' ')
-prediction = f'\n\n   {prediction}' if len(prediction) > 0 else prediction
+icon = (
+    weather_icons[status_code]
+    if status_code in weather_icons
+    else weather_icons["default"]
+)
+# print(icon)
 
 # temperature feels like
-temp_feel = html_data(".TodayDetailsCard--feelsLikeTempValue--Cf9Sl").text()
-temp_feel_text = f'Feels like {temp_feel}C'
+temp_feel = html_data(
+    "div[data-testid='FeelsLikeSection'] > span[data-testid='TemperatureValue']"
+).text()
+temp_feel_text = f"Feels like {temp_feel}c"
+# print(temp_feel_text)
 
 # min-max temperature
-temp_max = html_data(
-    ".CurrentConditions--tempHiLoValue--3SUHy > span:nth-child(1)").text()
-temp_min = html_data(
-    ".CurrentConditions--tempHiLoValue--3SUHy > span:nth-child(2)").text()
-temp_min_max = f' {temp_min}C /  {temp_max}C'
+temp_min = (
+    html_data("div[data-testid='wxData'] > span[data-testid='TemperatureValue']")
+    .eq(0)
+    .text()
+)
+temp_max = (
+    html_data("div[data-testid='wxData'] > span[data-testid='TemperatureValue']")
+    .eq(1)
+    .text()
+)
+temp_min_max = f" {temp_min}\t {temp_max}"
+# print(temp_min_max)
 
-# temperature distribution (day)
-temp_morning = html_data(
-    ".WeatherTable--wide--3dFXu > li:nth-child(1) > a:nth-child(1) > div:nth-child(2) > span:nth-child(1)").text()
-temp_afternoon = html_data(
-    ".WeatherTable--wide--3dFXu > li:nth-child(2) > a:nth-child(1) > div:nth-child(2) > span:nth-child(1)").text()
-temp_evening = html_data(
-    ".WeatherTable--wide--3dFXu > li:nth-child(3) > a:nth-child(1) > div:nth-child(2) > span:nth-child(1)").text()
-temp_overnight = html_data(
-    ".WeatherTable--wide--3dFXu > li:nth-child(4) > a:nth-child(1) > div:nth-child(2) > span:nth-child(1)").text()
-temp_dist_icons = f'🌄\t🔆\t🌇\t🌘'
-temp_dist = f'{temp_morning}\t{temp_afternoon}\t{temp_evening}\t{temp_overnight}'
-
-# sunrise and sunset time
-time_to_sunrise = html_data(
-    "#SunriseSunsetContainer-fd88de85-7aa1-455f-832a-eacb037c140a > div > div > div > div:nth-child(1) > p").text()
-time_to_sunset = html_data(
-    "#SunriseSunsetContainer-fd88de85-7aa1-455f-832a-eacb037c140a > div > div > div > div:nth-child(2) > p").text()
-time_sunrise_sunset = f'🌄 {time_to_sunrise}  🌇 {time_to_sunset}'
-
-# air quality index
-air_quality_index = html_data(
-    "#WxuAirQuality-sidebar-aa4a4fb6-4a9b-43be-9004-b14790f57d73 > div > section > div > div > div:nth-child(1) > svg > text").text()
-air_quality_value = html_data(
-    "#WxuAirQuality-sidebar-aa4a4fb6-4a9b-43be-9004-b14790f57d73 > div > section > div > div > div:nth-child(2) > div > div > span").text()
-air_quality_text = f'AQI: {air_quality_index} | {air_quality_value[:9]}..'
-
-# wind details
-wind_speed = html_data(
-    '.Wind--windWrapper--3aqXJ').text().split('\n')[1]
-wind_text = f' {wind_speed}'
-
-# visibility
-visbility = html_data(
-    "div.ListItem--listItem--2wQRK:nth-child(7) > div:nth-child(3) > span:nth-child(1)").text()
-visbility_text = f' {visbility}'
+# wind speed
+wind_speed = html_data("span[data-testid='Wind']").text().split("\n")[1]
+wind_text = f"  {wind_speed}"
+# print(wind_text)
 
 # humidity
-humidity = html_data(
-    "div.ListItem--listItem--2wQRK:nth-child(3) > div:nth-child(3) > span:nth-child(1)").text()
-humidity_text = f' {humidity}'
+humidity = html_data("span[data-testid='PercentageValue']").text()
+humidity_text = f" {humidity}"
+# print(humidity_text)
+
+# visibility
+visbility = html_data("span[data-testid='VisibilityValue']").text()
+visbility_text = f"  {visbility}"
+# print(visbility_text)
+
+# air quality index
+air_quality_index = html_data("text[data-testid='DonutChartValue']").text()
+# print(air_quality_index)
+
+# hourly rain prediction
+prediction = html_data("section[aria-label='Hourly Forecast']")(
+    "div[data-testid='SegmentPrecipPercentage'] > span"
+).text()
+prediction = prediction.replace("Chance of Rain", "")
+prediction = f"\n\n    (hourly) {prediction}" if len(prediction) > 0 else prediction
+# print(prediction)
+
 
 # tooltip text
 tooltip_text = str.format(

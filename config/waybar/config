@@ -67,7 +67,7 @@
                 "return-type": "json",
                 "max-length": 35,
                 "on-click": "playerctl -p spotify play-pause",
-                "on-click-right": "killall spotify",
+                "on-click-right": "sway workspace number 4",
                 "on-scroll-up" : "playerctl -p spotify next",
                 "on-scroll-down" : "playerctl -p spotify previous"
         },

@@ -199,18 +199,18 @@ set $normal     #4c4c4c
 set $inactive   #191919
 
 # colors                border     bg         text      indicator  chld_brdr
-client.focused          $normal    $normal    $inactive $normal    $normal
+client.focused          $normal    $normal    #e7e7e7   $normal    $normal
 client.focused_inactive $inactive  $inactive  $normal   $inactive  $inactive
-client.unfocused        $unfocused $unfocused $normal   $unfocused $unfocused
+client.unfocused        $unfocused $unfocused #a0a0a0   $unfocused $unfocused
 
-font pango:Sarasa Mono CL 15px
+font pango:Sarasa Mono CL Semibold 15px
 
 # Autostart
 exec xwayland enable
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec_always ~/.config/gtk-3.0/import-gsettings.sh &
-exec swaybg -i ~/Pictures/guts.jpg -m fill &
+exec swaybg -i ~/Pictures/wallpapers/guts.jpg -m fill &
 exec gsettings set org.gnome.desktop.wm.preferences button-layout ""
 exec ~/.config/waybar/launch.sh &
 exec dunst &

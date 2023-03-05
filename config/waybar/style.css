@@ -5,8 +5,9 @@
     border-radius: 16px 16px 0 0 ;
     min-height: 0;
     
-    font-family: "Sarasa Mono CL SemiBold", "Font Awesome 6 Pro Solid";
+    font-family: "Sarasa Mono CL", "Font Awesome 6 Pro Solid";
     font-size: 16px;
+    font-weight: bold;
 }
 
 window#waybar {
@@ -77,7 +78,6 @@ tooltip label {
     border-top: 6px solid @black;
     border-bottom: 6px solid @black;
     border-radius: 22px;
-    margin-right: 10px;
 }
 
 #memory {
@@ -127,6 +127,20 @@ tooltip label {
     border-top: 6px solid @black;
     border-bottom: 6px solid @black;
     border-radius: 22px;
+}
+
+#custom-launcher {
+    background: @black;
+    color: @green;
+    padding: 0 15px;    
+}
+
+#custom-powermenu {
+    background: @black;
+    color: #e64553;
+    padding: 0 10px;
+    margin-right: 2px;
+    
 }
 
 #custom-weather {

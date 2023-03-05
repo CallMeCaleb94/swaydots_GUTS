@@ -134,9 +134,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Volume keys
-bindsym XF86AudioMute exec volume toggle
-bindsym XF86AudioLowerVolume exec volume down 
-bindsym XF86AudioRaiseVolume exec volume up
+bindsym alt+0 exec volume toggle
+bindsym alt+minus exec volume down 
+bindsym alt+equal exec volume up
 
 # Media Control
 bindsym XF86AudioPlay exec playerctl play-pause

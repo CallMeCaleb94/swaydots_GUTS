@@ -76,7 +76,7 @@ temp_min_max = f" {temp_min}\t {temp_max}"
 
 # wind speed
 wind_speed = html_data("span[data-testid='Wind']").text().split("\n")[1]
-wind_text = f"  {wind_speed}"
+wind_text = f" {wind_speed}"
 # print(wind_text)
 
 # humidity
@@ -98,17 +98,17 @@ prediction = html_data("section[aria-label='Hourly Forecast']")(
     "div[data-testid='SegmentPrecipPercentage'] > span"
 ).text()
 prediction = prediction.replace("Chance of Rain", "")
-prediction = f"\n\n    (hourly) {prediction}" if len(prediction) > 0 else prediction
+#prediction = f"\n\n(hourly) {prediction}" if len(prediction) > 0 else prediction
+prediction = f""
 # print(prediction)
 
 
 # tooltip text
 tooltip_text = str.format(
-    '\n{}\n{}\n{}\n{}\n{}\n{}\n',
+    '\n{}\n{}\n{}\n{}\n{}\n{}',
     f'<span size="x-large" font_desc="Font Awesome 6 Pro Solid 15">{icon}</span><span font="14"> {temp}C</span> ',
     f'<big>{status}</big>',
     f'<span size="medium">{temp_feel_text}</span>',
-    f'<span size="medium">{temp_min_max}</span>',
     f'<span size="medium">{wind_text}</span>',
     f'<span size="medium">{humidity_text}</span>',
     f'<i>{prediction}</i>',

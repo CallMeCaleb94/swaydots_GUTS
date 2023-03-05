@@ -2,14 +2,15 @@
 
 * {
     border: none;
-    border-radius: 12px;
+    border-radius: 16px 16px 0 0 ;
     min-height: 0;
+    
     font-family: "Sarasa Mono CL SemiBold", "Font Awesome 6 Pro Solid";
-    font-size: 17px;
+    font-size: 16px;
 }
 
 window#waybar {
-    background: transparent;
+    background: @black;
     color: @black;
 }
 
@@ -22,27 +23,31 @@ tooltip label {
 }
 
 #workspaces {
-    background: @black;
-    color: @black;
+    background: @black1;
+    color: @black1;
     padding: 0 20px;
+    border-top: 6px solid @black;
+    border-bottom: 6px solid @black;
+    border-radius: 22px;
   }
   #workspaces button {
-    background: @black;
+    background: @black1;
     color: @black;
     border-radius: 12px;
     padding: 0;
 }
 #workspaces button:hover {
-    background: @black;
+    background: @black1;
     color: @black1;
     border-radius: 12px;
     border-bottom: 8px solid transparent;
 }
 #workspaces button.focused {
     background: @black1;
-    border-top: 6px solid @black;
-    border-bottom: 6px solid @black;
-    border-radius: 12px;
+    border-top: 0px solid @black1;
+    border-bottom: 2px solid #4c4c4c;
+
+    border-radius: 0px;
 }
 #workspaces button.urgent {
     background: @black2;
@@ -66,47 +71,70 @@ tooltip label {
 }
 
 #clock {
-    background: @black;
+    background: @black1;
     color: @white2;
-    padding: 0 30px;
+    padding: 0 20px;
+    border-top: 6px solid @black;
+    border-bottom: 6px solid @black;
+    border-radius: 22px;
+    margin-right: 10px;
 }
 
 #memory {
-    background: @black;
+    background: @black1;
     color: @orange;
-    padding: 0 30px;
+    padding: 0 20px;
+    border-top: 6px solid @black;
+    border-bottom: 6px solid @black;
+    border-radius: 22px;
 }
 
 #cpu {
-    background: @black;
+    background: @black1;
     color: @green;
-    padding: 0 30px;
+    padding: 0 20px;
+    border-top: 6px solid @black;
+    border-bottom: 6px solid @black;
+    border-radius: 22px;
 }
 
 #pulseaudio {
-    background: @black;
+    background: @black1;
     color: @blue;
-    padding: 0 30px;
+    padding: 0 20px;
+    border-top: 6px solid @black;
+    border-bottom: 6px solid @black;
+    border-radius: 22px;
 }
 #pulseaudio.muted {
     color: @pink;
 }
 
 #custom-spotify {
-    background: @black;
+    background: @black1;
     color: @green;
-    padding: 0 30px;
+    padding: 0 20px;
+    border-top: 6px solid @black;
+    border-bottom: 6px solid @black;
+    border-radius: 22px;
+    margin-left: 10px;
 }
 
 #custom-pacman {
-    background: @black;
+    background: @black1;
     color: @yellow;
-    padding: 0 30px;
+    padding: 0 20px;
+    border-top: 6px solid @black;
+    border-bottom: 6px solid @black;
+    border-radius: 22px;
 }
 
 #custom-weather {
-    background: @black;
-    padding: 0 30px;
+    background: @black1;
+    padding: 0 20px;
+    border-top: 6px solid @black;
+    border-bottom: 6px solid @black;
+    border-radius: 22px;
 }
 #custom-weather.severe {
     color: @pink;

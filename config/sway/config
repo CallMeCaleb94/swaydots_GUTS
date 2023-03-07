@@ -198,10 +198,10 @@ set $unfocused  #262626
 set $normal     #4c4c4c
 set $inactive   #191919
 
-# colors                border     bg         text      indicator  chld_brdr
-client.focused          $normal    $normal    #e7e7e7   $normal    $normal
-client.focused_inactive $inactive  $inactive  $normal   $inactive  $inactive
-client.unfocused        $unfocused $unfocused #a0a0a0   $unfocused $unfocused
+# colors                border     bg         text     indicator  chld_brdr
+client.focused          $normal    $normal    #e7e7e7  $normal    $normal
+client.focused_inactive $inactive  $inactive  $normal  $inactive  $inactive
+client.unfocused        $unfocused $unfocused #a0a0a0  $unfocused $unfocused
 
 font pango:Sarasa Mono CL Semibold 15px
 

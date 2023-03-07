@@ -40,6 +40,10 @@
   },
   "workbench.list.smoothScrolling": true,
   "editor.smoothScrolling": true,
+  "colorize.languages": [
+    "javascript",
+    "json"
+  ],
   "colorize.include": [
 
     "**/*.css",
@@ -50,4 +54,5 @@
     "**/*.ini",
     "**/*.sh"
   ],
+  "security.workspace.trust.untrustedFiles": "open",
 }

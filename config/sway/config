@@ -211,7 +211,6 @@ exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec_always ~/.config/gtk-3.0/import-gsettings.sh &
 exec swaybg -i ~/Pictures/wallpapers/guts.jpg -m fill &
-exec gsettings set org.gnome.desktop.wm.preferences button-layout ""
 exec ~/.config/waybar/launch.sh &
 exec dunst &
 exec xrdb -merge ~/.Xresources &

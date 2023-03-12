@@ -3,7 +3,6 @@ export PATH="$HOME/.local/bin/colorscripts:$PATH"
 export PATH="$HOME/.config/rofi/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR=nvim
-export GTK_OVERLAY_SCROLLING=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Djdk.gtk.version=3'

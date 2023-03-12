@@ -55,4 +55,5 @@
     "**/*.sh"
   ],
   "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDelete": false,
 }

@@ -173,6 +173,7 @@ for_window [title="(?:Choose Files)"] floating enable
 for_window [title="(?:Copying)"] floating enable
 for_window [title="mpv"] floating enable, resize set 900 600
 for_window [class="Lxappearance"] floating enable
+for_window [class="Apache NetBeans IDE 16"] floating enable, resize set 900 600
 for_window [class="Viewnior"] floating enable
 for_window [class="Brave"] move to workspace number 2
 for_window [class="Spotify"] move to workspace number 4

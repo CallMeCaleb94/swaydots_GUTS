@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+# requieres python-gobject
+
 import argparse
 import logging
 import sys
@@ -42,7 +45,10 @@ def on_metadata(player, metadata, manager):
         track_info = player.get_title()
 
     if player.props.status != 'Playing' and track_info:
-        track_info = 'Paused'
+        #track_info = 'Paused'
+        track_info = '{artist} ~ {title}'.format(artist=player.get_artist(),
+                                                 title=player.get_title())
+
     write_output(track_info, player)
 
 

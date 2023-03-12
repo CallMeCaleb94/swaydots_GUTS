@@ -12,8 +12,8 @@ weather_icons = {
     'cloudyFoggyNight': '',
     'rainyDay': '',
     'rainyNight': '',
-    'snowyIcyDay': '',
-    'snowyIcyNight': '',
+    'snowyIcyDay': '',
+    'snowyIcyNight': '',
     'severe': '',
     'default': ''
 }
@@ -57,7 +57,7 @@ icon = (
 temp_feel = html_data(
     "div[data-testid='FeelsLikeSection'] > span[data-testid='TemperatureValue']"
 ).text()
-temp_feel_text = f"Feels like {temp_feel}c"
+temp_feel_text = f"Feels like {temp_feel}C"
 # print(temp_feel_text)
 
 # min-max temperature

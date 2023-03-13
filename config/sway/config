@@ -172,13 +172,10 @@ for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable
 for_window [title="(?:Choose Files)"] floating enable
 for_window [title="(?:Copying)"] floating enable
 for_window [title="mpv"] floating enable, resize set 900 600
-for_window [class="Lxappearance"] floating enable
-for_window [class="Apache NetBeans IDE 16"] floating enable, resize set 900 600
 for_window [class="Viewnior"] floating enable
 for_window [class="Brave"] move to workspace number 2
 for_window [class="Spotify"] move to workspace number 4
 for_window [class="discord"] move to workspace number 5
-for_window [app_id="thunar"] move to workspace number 6
 for_window [app_id="engrampa"] floating enable
 for_window [app_id="termfloat"] floating enable
 for_window [app_id="pavucontrol"] floating enable, resize set 900 600
@@ -203,6 +200,7 @@ set $inactive   #191919
 client.focused          $normal    $normal    #e7e7e7  $normal    $normal
 client.focused_inactive $inactive  $inactive  $normal  $inactive  $inactive
 client.unfocused        $unfocused $unfocused #a0a0a0  $unfocused $unfocused
+client.urgent           #c49ec4    #c49ec4    $inactive
 
 font pango:Sarasa Mono CL Semibold 15px
 
@@ -219,5 +217,6 @@ exec wl-paste --watch cliphist store &
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec spotify &
 exec kotatogram-desktop &
+exec thunar --daemon
 
 include /etc/sway/config.d/*

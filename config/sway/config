@@ -192,7 +192,7 @@ seat seat0 xcursor_theme WhiteSur-cursors 27
 gaps inner 10
 gaps outer 40
 default_border pixel 5
-default_floating_border pixel 2 
+default_floating_border pixel 5 
 
 # Window Colors
 set $unfocused  #262626

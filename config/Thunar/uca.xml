@@ -3,9 +3,11 @@
 <action>
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
+	<submenu></submenu>
 	<unique-id>1653152521049373-1</unique-id>
 	<command>alacritty --class=&quot;termfloat&quot;</command>
 	<description></description>
+	<range></range>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<directories/>
@@ -13,9 +15,11 @@
 <action>
 	<icon>com.github.maoschanz.DynamicWallpaperEditor</icon>
 	<name>Set wallpaper</name>
+	<submenu></submenu>
 	<unique-id>1653152845925747-1</unique-id>
 	<command>killall swaybg ; swaybg -i %n -m fill</command>
 	<description></description>
+	<range></range>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<image-files/>
@@ -23,9 +27,11 @@
 <action>
 	<icon>nvim</icon>
 	<name>Nvim</name>
+	<submenu></submenu>
 	<unique-id>1653154187810667-1</unique-id>
 	<command>alacritty -e nvim %n</command>
 	<description></description>
+	<range></range>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<other-files/>
@@ -33,10 +39,12 @@
 </action>
 <action>
 	<icon>com.github.gijsgoudzwaard.image-optimizer</icon>
-	<name>Mountain</name>
+	<name>ImageGoMountain</name>
+	<submenu></submenu>
 	<unique-id>1653157696807875-1</unique-id>
 	<command>python ~/Documents/ImageGoNord/src/cli.py --mountain -i=%n -o=$(ls %f | grep %n | cut -f 1 -d &apos;.&apos;)-mountain</command>
-	<description></description>
+	<description>A tool that you can convert your rgb images to Mountain palette using the ImageGoNord tool</description>
+	<range></range>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<image-files/>

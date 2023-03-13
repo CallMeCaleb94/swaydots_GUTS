@@ -52,8 +52,12 @@
     "**/*.less",
     "**/*.styl",
     "**/*.ini",
-    "**/*.sh"
+    "**/*.sh",
+    "**/*.txt"
   ],
   "security.workspace.trust.untrustedFiles": "open",
   "explorer.confirmDelete": false,
+  "colorize.colorized_variables": [
+    "CSS"
+  ],
 }

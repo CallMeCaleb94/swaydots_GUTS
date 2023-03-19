@@ -90,5 +90,3 @@ alias paci="yay -Slq | fzf --color=16 -m --preview 'cat <(yay -Si {1}) <(yay -Fl
 alias pacr="yay -Qq | fzf --color=16 -m --preview 'yay -Qi {1}' | xargs -ro yay -Rns"
 alias pac="yay -Q | fzf --color=16"
 alias pacc='yay -Qtdq | yay -Rns -'
-alias rendersvg='resvg'
-alias inkscape='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=inkscape org.inkscape.Inkscape'

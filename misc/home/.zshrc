@@ -52,7 +52,6 @@ setopt share_history          # share command history data
 # source plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 cd() {
     builtin cd "$@" && command logo-ls -A
@@ -74,11 +73,10 @@ alias v='nvim'
 alias vim='nvim'
 alias mv='mv -v'
 alias cp='cp -r'
-alias rm='rm -rfv'
+alias rm='rm -rf'
 alias gc='git clone'
 alias q='exit'
-alias rx='clear ; xltt'
-alias hist='zsh-history-substring search'
+alias xltt='clear ; xltt'
 
 alias zshrc='nvim $HOME/.zshrc'
 alias xresources='nvim $HOME/.Xresources'
@@ -88,8 +86,7 @@ alias swayrc='nvim $HOME/.config/sway/config'
 alias bar='nvim $HOME/.config/waybar/config'
 alias style='nvim $HOME/.config/waybar/style.css'
 
-alias mirrors='sudo reflector --verbose -c Brazil -a 12 --sort rate --save /etc/pacman.d/mirrorlist ; yay -Syyu'
-alias paci="yay -Slq | fzf --color=16 -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk \"{print \$2}\")' | xargs -ro yay -S"
+alias paci="yay -Slq | fzf --color=16 -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk \"{print \$2}\")' | xargs -ro yay -S --needed"
 alias pacr="yay -Qq | fzf --color=16 -m --preview 'yay -Qi {1}' | xargs -ro yay -Rns"
 alias pac="yay -Q | fzf --color=16"
 alias pacc='yay -Qtdq | yay -Rns -'

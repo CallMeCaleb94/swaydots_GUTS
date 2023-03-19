@@ -1,7 +1,7 @@
 format = """
-($directory)($character)
+($character)
 """
-right_format = """$all"""
+right_format = """$git_branch$git_status$cmd_duration$directory"""
 
 add_newline = false
 command_timeout = 2000

@@ -1,15 +1,9 @@
-/** Some apps use titlebar class and some window */
-.titlebar,
-window {
-	border-radius: 0;
-	box-shadow: none;
+headerbar {
+  color: #e7e7e7 ;
+  background-color: #0f0f0f ;
 }
 
-/** also remove shaddows */
-decoration {
-	box-shadow: none;
-}
-
-decoration:backdrop {
-	box-shadow: none;
+headerbar:backdrop {
+  color: #e7e7e7;
+  background-color: #0f0f0f ;
 }

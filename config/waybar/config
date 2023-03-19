@@ -13,7 +13,7 @@
         "sway/workspaces": {
                 "disable-scroll": false,
                 "all-outputs": true,
-                "format": "<span font_desc='Font Awesome 6 Pro Solid 14'>{icon}</span>",
+                "format": "<span font_desc='Font Awesome 6 Pro Solid 15'>{icon}</span>",
                 "format-icons": {
                         "1": "<span foreground='#c49ec4'></span>",
                         "2": "<span foreground='#9ec4c3'></span>",

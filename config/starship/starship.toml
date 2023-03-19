@@ -10,14 +10,19 @@ command_timeout = 2000
 disabled = false
 
 [character]
-error_symbol = "[󰋔](bold red)"
-success_symbol = "[󰋑](bold green)"
-vicmd_symbol = "[󰮭](bold yellow)"
-format = "$symbol [󰄾 ](bold bright-black)"
+error_symbol = "[](bold red)"
+success_symbol = "[](bold green)"
+vicmd_symbol = "[  ](bold yellow)"
+format = "$symbol (bold bright-black)"
 
 [hostname]
 ssh_only = true
 format = "[$hostname](bold blue) "
+disabled = false
+
+[cmd_duration]
+min_time = 100
+format = "[$duration](bold gray) "
 disabled = false
 
 [username]
@@ -35,7 +40,7 @@ format = "[$path]($style)[$lock_symbol]($lock_style) "
 symbol = "[󰢱 ](blue) "
 
 [nodejs]
-format = "via [󰊦 $version](bold blue) "
+format = " [󰊦 $version](bold blue) "
 
 [package]
 format = "[󰹄  $version](bold yellow) "
@@ -43,7 +48,7 @@ format = "[󰹄  $version](bold yellow) "
 [git_branch]
 disabled = false
 format = "[$symbol $branch]($style) "
-symbol = "󰘬 "
+symbol = "󰘬"
 style = "bold yellow"
 
 [git_status]

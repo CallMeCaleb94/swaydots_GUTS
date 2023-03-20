@@ -212,7 +212,7 @@ exec_always ~/.config/gtk-3.0/import-gsettings.sh &
 exec swaybg -i ~/Pictures/wallpapers/guts.jpg -m fill &
 exec ~/.config/waybar/launch.sh &
 exec dunst &
-exec xrdb -merge ~/.Xresources &
+exec xrdb -load ~/.Xresources &
 exec wl-paste --watch cliphist store &
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec spotify &

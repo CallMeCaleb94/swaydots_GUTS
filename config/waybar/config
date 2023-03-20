@@ -37,7 +37,7 @@
         },
         "clock": {
                 "format": "<span font='13'></span> {:%H:%M}",
-                "format-alt": "<span font='13'></span> {:%H:%M ~ %A, %d/%m}",
+                "format-alt": "<span font='13'></span> {:%H:%M · %A, %d/%m}",
                 "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
         }, 
         "memory": {
@@ -61,15 +61,15 @@
         },
         "custom/spotify": {
                 "exec": "~/.config/waybar/scripts/player.py --player spotify",
-                "format": "<span font='13'>{icon}</span> {}",
-                "format-icons": [""],
+                "format": "<span font='14'>{icon}</span> {}",
+                "format-icons": [""],
                 "escape": true,
                 "return-type": "json",
-                "max-length": 35,
+                "max-length": 40,
                 "on-click": "playerctl -p spotify play-pause",
                 "on-click-right": "sway workspace number 4",
-                "on-scroll-up" : "playerctl -p spotify next",
-                "on-scroll-down" : "playerctl -p spotify previous"
+                "on-scroll-up": "playerctl -p spotify next",
+                "on-scroll-down": "playerctl -p spotify previous"
         },
         "custom/weather": {
                 "exec": "~/.config/waybar/scripts/weather.py",
@@ -84,15 +84,18 @@
                 "format": "<span font='13'></span> {} updates",
                 "interval": 3600, 
                 "signal": 8,
-                "on-click": "alacritty"
+                "on-click": "alacritty",
+                "tooltip": false
         },
         "custom/launcher": {
-                "format": "<span font='13'></span> {}",
-                "on-click": "launcher"
+                "format": "<span font='13'></span>",
+                "on-click": "launcher",
+                "tooltip": false
         },
         "custom/powermenu": {
-                "format": "<span font='13'></span> {}",
-                "on-click": "powermenu"
+                "format": "<span font='13'></span>",
+                "on-click": "powermenu",
+                "tooltip": false
         }
 }
 

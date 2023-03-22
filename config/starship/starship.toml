@@ -47,7 +47,7 @@ format = "[󰹄  $version](bold yellow) "
 
 [git_branch]
 disabled = false
-format = "[$symbol $branch]($style) "
+format = "[ $symbol $branch]($style) "
 symbol = "󰘬"
 style = "bold yellow"
 
@@ -58,6 +58,6 @@ untracked = "󰷌 "
 modified = "󰏪 "
 renamed = "󱇧 "
 deleted = "󰆴 "
-ahead = "󰜷 "
+ahead = "󰜷"
 diverged = "󰹺 "
 behind = "󰜮 "

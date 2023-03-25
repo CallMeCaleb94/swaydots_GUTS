@@ -3,7 +3,7 @@ output HDMI-A-1 mode 1920x1080@74.973Hz position 0,0
 ### Variables
 
 set $mod Mod4
-set $term alacritty
+set $term foot
 set $menu launcher 
 set $powermenu powermenu
 set $browser brave
@@ -14,7 +14,7 @@ set $browser brave
 #
     # Start a terminal
     bindsym $mod+Return exec $term
-    bindsym $mod+Shift+Return exec $term --class="termfloat"
+    bindsym $mod+Shift+Return exec $term --app-id="termfloat"
 
     # Kill focused window
     bindsym $mod+q kill

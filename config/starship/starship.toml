@@ -21,7 +21,7 @@ format = "[$hostname](bold blue) "
 disabled = false
 
 [cmd_duration]
-min_time = 100
+min_time = 1
 format = "[$duration](bold gray) "
 disabled = false
 
@@ -47,17 +47,17 @@ format = "[󰹄  $version](bold yellow) "
 
 [git_branch]
 disabled = false
-format = "[ $symbol $branch]($style) "
+format = "[ $symbol $branch ]($style)"
 symbol = "󰘬"
 style = "bold yellow"
 
 [git_status]
-conflicted = "󰈻 "
-up_to_date = "󰸞 "
-untracked = "󰷌 "
-modified = "󰏪 "
-renamed = "󱇧 "
-deleted = "󰆴 "
+conflicted = "󰈻"
+up_to_date = "󰸞"
+untracked = "󰷌"
+modified = "󰏪"
+renamed = "󱇧"
+deleted = "󰆴"
 ahead = "󰜷"
-diverged = "󰹺 "
-behind = "󰜮 "
+diverged = "󰹺"
+behind = "󰜮"

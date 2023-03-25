@@ -1,19 +1,24 @@
-format = """
-($character)
-"""
+## ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█░█░▀█▀░█▀█
+## ░▀▀█░░█░░█▀█░█▀▄░▀▀█░█▀█░░█░░█▀▀
+## ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░
+## CROSS-SHELL PROMPT
+##
+## rxyhn's starship configuration
+## The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+
+format = "$all"
 right_format = """$git_branch$git_status$cmd_duration$directory"""
 
+# Disable the blank line at the start of the prompt
 add_newline = false
-command_timeout = 2000
 
 [line_break]
 disabled = false
 
 [character]
-error_symbol = "[](bold red)"
 success_symbol = "[](bold green)"
-vicmd_symbol = "[  ](bold yellow)"
-format = "$symbol (bold bright-black)"
+error_symbol = "[](bold red)"
+vicmd_symbol = "[](bold yellow)"
 
 [hostname]
 ssh_only = true
@@ -22,42 +27,46 @@ disabled = false
 
 [cmd_duration]
 min_time = 1
-format = "[$duration](bold gray) "
+format = " [](fg:#262626 bg:none)[$duration ]($style)[](fg:#9ec49f bg:#262626)[󰞌](fg:#262626 bg:#9ec49f)[](fg:#9ec49f bg:none)"
 disabled = false
-
-[username]
-disabled = true
-show_always = true
-style_user = "bold white"
-format = "[$user]($style)"
+style = "fg:#f0f0f0 bg:#262626"
 
 [directory]
-truncation_length = 5
-home_symbol = "~"
-format = "[$path]($style)[$lock_symbol]($lock_style) "
-
-[lua]
-symbol = "[󰢱 ](blue) "
-
-[nodejs]
-format = " [󰊦 $version](bold blue) "
-
-[package]
-format = "[󰹄  $version](bold yellow) "
+format = " [](fg:#262626 bg:none)[$path ]($style)[](fg:#6791c9 bg:#262626)[󰝰](fg:#262626 bg:#6791c9)[](fg:#6791c9 bg:none)"
+style = "fg:#f0f0f0 bg:#262626"
+truncation_length = 3
+truncate_to_repo=false
 
 [git_branch]
-disabled = false
-format = "[ $symbol $branch ]($style)"
-symbol = "󰘬"
-style = "bold yellow"
+format = " [](fg:#262626 bg:none)[$branch ]($style)[](fg:#c4c19e bg:#262626)[󰘬](fg:#262626 bg:#c4c19e)[](fg:#c4c19e bg:none)"
+style = "fg:#f0f0f0 bg:#262626"
 
 [git_status]
-conflicted = "󰈻"
-up_to_date = "󰸞"
-untracked = "󰷌"
-modified = "󰏪"
-renamed = "󱇧"
-deleted = "󰆴"
-ahead = "󰜷"
-diverged = "󰹺"
-behind = "󰜮"
+format= " [](fg:#262626 bg:none)[$all_status$ahead_behind ]($style)[](fg:#67afc1 bg:#262626)[󰊤](fg:#262626 bg:#67afc1)[](fg:#67afc1 bg:none)"
+style = "fg:#f0f0f0 bg:#262626"
+conflicted = "="
+ahead =	"󱦲${count}"
+behind = "󱦳${count}"
+diverged = "󰹹󱦲${ahead_count}⇣${behind_count}"
+up_to_date = "󰄬"
+untracked = "?${count}"
+stashed = "󰏖"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "󰲶${count}"
+deleted = "󰩹${count}"
+
+[git_commit]
+format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"
+style = "green"
+
+[git_state]
+rebase = "REBASING"
+merge =	"MERGING"
+revert = "REVERTING"
+cherry_pick = "CHERRY-PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+style =	"yellow"
+format = '\([$state( $progress_current/$progress_total)]($style)\) '

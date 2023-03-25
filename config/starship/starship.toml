@@ -43,7 +43,7 @@ format = " [](fg:#262626 bg:none)[$branch ]($style)[](fg:#c4c19e bg:#26262
 style = "fg:#f0f0f0 bg:#262626"
 
 [git_status]
-format= " [](fg:#262626 bg:none)[$all_status$ahead_behind ]($style)[](fg:#67afc1 bg:#262626)[󰊤](fg:#262626 bg:#67afc1)[](fg:#67afc1 bg:none)"
+format= " [](fg:#262626 bg:none)[$all_status$ahead_behind]($style)[](fg:#67afc1 bg:#262626)[󰊤](fg:#262626 bg:#67afc1)[](fg:#67afc1 bg:none)"
 style = "fg:#f0f0f0 bg:#262626"
 conflicted = "="
 ahead =	"󱦲${count} "

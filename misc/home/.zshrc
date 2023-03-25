@@ -80,7 +80,7 @@ alias xltt='clear ; xltt'
 
 alias zshrc='nvim $HOME/.zshrc'
 alias xresources='nvim $HOME/.Xresources'
-alias alacrittyrc='nvim $HOME/.config/alacritty/alacritty.yml'
+alias footrc='nvim $HOME/.config/foot/foot.ini'
 alias dunstrc='nvim $HOME/.config/dunst/dunstrc'
 alias swayrc='nvim $HOME/.config/sway/config'
 alias bar='nvim $HOME/.config/waybar/config'

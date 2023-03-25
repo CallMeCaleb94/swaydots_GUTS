@@ -84,7 +84,7 @@
                 "format": "<span font='13'></span> {} updates",
                 "interval": 3600, 
                 "signal": 8,
-                "on-click": "foot --app-id termfloat yay -Syyu | $SHELL",
+                "on-click": "foot --app-id termfloat yay -Syyu",
                 "tooltip": false
         },
         "custom/launcher": {

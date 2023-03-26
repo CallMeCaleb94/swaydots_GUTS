@@ -5,7 +5,7 @@
 	<name>Open Terminal Here</name>
 	<submenu></submenu>
 	<unique-id>1653152521049373-1</unique-id>
-	<command>alacritty --class=&quot;termfloat&quot;</command>
+	<command>foot --app-id termfloat </command>
 	<description></description>
 	<range></range>
 	<patterns>*</patterns>
@@ -29,7 +29,7 @@
 	<name>Nvim</name>
 	<submenu></submenu>
 	<unique-id>1653154187810667-1</unique-id>
-	<command>alacritty -e nvim %n</command>
+	<command>foot --app-id termfloat nvim %n</command>
 	<description></description>
 	<range></range>
 	<patterns>*</patterns>

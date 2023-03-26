@@ -8,10 +8,10 @@
  */
 
 configuration {
-    font:			                "SF Pro Medium 11";
+    font:                           "SF Pro Medium 12";
     show-icons:                     true;
-    icon-theme: 		            "Papirus";
-    display-drun: 		            "";
+    icon-theme:                     "Papirus";
+    display-drun:                   "";
     drun-display-format:            "{name}";
     disable-history:                false;
     sidebar-mode:                   false;

@@ -8,7 +8,7 @@
  */
 
 configuration {
-    font:			                "Sarasa Mono CL Semibold 12";
+    font:			                "SF Pro Medium 11";
     show-icons:                     true;
     icon-theme: 		            "Papirus";
     display-drun: 		            "";
@@ -58,7 +58,7 @@ prompt {
     padding: 			            0.25% 0.75% 0% -0.25%;
     background-color: 		        @background-alt;
     text-color: 		            @foreground;
-    font:			            "   Font Awesome 6 Pro Solid 14";
+    font:			                "Font Awesome 6 Pro Solid 14";
 }
 
 entry {

@@ -11,7 +11,7 @@ right_format = """$git_branch$git_status$cmd_duration$directory"""
 
 # Disable the blank line at the start of the prompt
 add_newline = false
-command_timeout = 2000
+#command_timeout = 2000
 
 [line_break]
 disabled = true
@@ -54,8 +54,8 @@ untracked = "?${count} "
 stashed = "󰏖"
 modified = "!${count} "
 staged = "+${count} "
-renamed = "󰲶${count} "
-deleted = "󰩹${count} "
+renamed = "»${count} "
+deleted = "-${count} "
 
 [git_commit]
 format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"

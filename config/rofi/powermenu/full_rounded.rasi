@@ -8,9 +8,9 @@
  */
 
 configuration {
-    font:			                "Sarasa Mono CL Semibold 14";
+    font:			                "SF Pro Medium 13";
     show-icons:                     false;
-    icon-theme: 		    "       Papirus";
+    icon-theme: 		            "Papirus";
     drun-display-format:            "{name}";
     disable-history:                false;
     sidebar-mode: 		            false;

@@ -203,7 +203,7 @@ client.focused_inactive $inactive  $inactive  $normal  $inactive  $inactive
 client.unfocused        $unfocused $unfocused #a0a0a0  $unfocused $unfocused
 client.urgent           #c49ec4    #c49ec4    $inactive
 
-font pango:Sarasa Mono CL Semibold 15px
+font pango:SF Mono Semibold 15px
 
 # Autostart
 exec xwayland enable

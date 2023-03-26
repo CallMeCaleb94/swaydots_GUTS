@@ -4,8 +4,8 @@
   "workbench.startupEditor": "none",
   "extensions.ignoreRecommendations": true,
   "editor.suggestSelection": "first",
-  "editor.fontSize": 18,
-  "editor.fontFamily": "'Sarasa Mono CL', 'Font Awesome 6 Pro Solid', 'Material Design Icons'",
+  "editor.fontSize": 16,
+"editor.fontLigatures": true,
   "workbench.colorCustomizations": {
     "list.activeSelectionBackground": "#262626",
     "list.hoverBackground": "#262626",
@@ -53,11 +53,16 @@
     "**/*.styl",
     "**/*.ini",
     "**/*.sh",
-    "**/*.txt"
+    "**/*.txt",
+    "**/*.toml"
   ],
   "security.workspace.trust.untrustedFiles": "open",
   "explorer.confirmDelete": false,
   "colorize.colorized_variables": [
     "CSS"
   ],
+  "files.autoSave": "afterDelay",
+  "editor.fontFamily": "'SF Mono', 'Font Awesome 6 Pro Solid', 'Material Design Icons'",
+  "workbench.colorTheme": "Visual Studio Dark",
+  "editor.minimap.enabled": false,
 }

@@ -6,10 +6,10 @@
     margin-top: 2px;
     margin-bottom: 2px;
     
-    font-family: "Sarasa Mono CL", "Font Awesome 6 Pro Solid";
-    font-size: 1.04em;
-    font-weight: bold;
-    font-style: italic;
+    font-family: "SF Mono", "Font Awesome 6 Pro Solid";
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
 }
 
 window#waybar {

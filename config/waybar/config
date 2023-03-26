@@ -62,7 +62,7 @@
         },
         "custom/spotify": {
                 "exec": "~/.config/waybar/scripts/player.py --player spotify",
-                "format": "<span font='15'>{icon}</span> {}",
+                "format": "<span font='15' rise='-1pt'>{icon}</span> {}",
                 "format-icons": [""],
                 "escape": true,
                 "return-type": "json",

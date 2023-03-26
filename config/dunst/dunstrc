@@ -22,7 +22,7 @@ progress_bar_min_width = 0
 progress_bar_max_width = 300
 progress_bar_frame_width = 0
 
-font = "SF Pro 10.5"
+font = "SF Pro Medium 10.5"
 
 format = "<span size='115%' font_desc='SF Pro' style='normal' weight='600' foreground='#c49ec4'>%s</span>\n%b"
 
@@ -51,13 +51,13 @@ mouse_middle_click = context_all
 mouse_right_click = close_all
 
 [urgency_low]
-timeout = 5
+timeout = 10
 background = "#0f0f0f"
 foreground = "#e7e7e7"
 highlight = "#c49ec4"
 
 [urgency_normal]
-timeout = 10
+timeout = 20
 background = "#0f0f0f"
 foreground = "#e7e7e7"
 highlight = "#c49ec4"

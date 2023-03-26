@@ -37,7 +37,7 @@
         },
         "clock": {
                 "format": "<span font='13'></span> {:%H:%M}",
-                "format-alt": "<span font='13'></span> {:%H:%M · %A, %d/%m}",
+                "format-alt": "<span font='13'></span> {:%H:%M ~ %A, %d/%m}",
                 "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
         }, 
         "memory": {
@@ -57,7 +57,8 @@
                 },
                 "scroll-step": 5,
                 "on-click": "volume toggle",
-                "on-click-right": "pavucontrol"
+                "on-click-right": "pavucontrol",
+                "tooltip": false
         },
         "custom/spotify": {
                 "exec": "~/.config/waybar/scripts/player.py --player spotify",

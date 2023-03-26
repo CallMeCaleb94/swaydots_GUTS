@@ -106,7 +106,7 @@ prediction = f""
 # tooltip text
 tooltip_text = str.format(
     '{}\n{}\n{}\n{}\n{}{}',
-    f'<span size="x-large" font_desc="Font Awesome 6 Pro Solid 15">{icon}</span><span font="14"> {temp}C</span> ',
+    f'<span size="x-large" font_desc="Font Awesome 6 Pro Solid 15">{icon}</span> <span font="14" weight="bold" style="italic">{temp}C</span> ',
     f'<big>{status}</big>',
     f'<span size="medium">{temp_feel_text}</span>',
     f'<span size="medium">{wind_text}</span>',

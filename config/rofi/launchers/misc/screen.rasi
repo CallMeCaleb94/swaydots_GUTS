@@ -8,7 +8,7 @@
  */
 
 configuration {
-    font:                           "SF Pro Medium 12";
+    font:                           "DM Sans Medium 12";
     show-icons:                     true;
     icon-theme:                     "Papirus";
     display-drun:                   "";

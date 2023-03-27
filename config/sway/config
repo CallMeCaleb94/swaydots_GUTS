@@ -2,11 +2,13 @@ output HDMI-A-1 mode 1920x1080@74.973Hz position 0,0
 
 ### Variables
 
-set $mod Mod4
-set $term foot
-set $menu launcher 
-set $powermenu powermenu
-set $browser brave
+  set {
+    $mod Mod4
+    $term foot
+    $menu launcher 
+    $powermenu powermenu
+    $browser brave
+  }
 
 ### Key bindings
 #
@@ -117,7 +119,7 @@ set $browser brave
 #
 # Resizing containers:
 #
-mode "resize" {
+  mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
     # up will shrink the containers height
@@ -130,7 +132,7 @@ mode "resize" {
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
-}
+  }
 bindsym $mod+r mode "resize"
 
 # Volume keys
@@ -160,31 +162,31 @@ bindsym $mod+Shift+p exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[
 bindsym $mod+alt+l exec lock
 
 # Window Rules
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="bubble"] floating enable
-for_window [window_role="task_dialog"] floating enable
-for_window [window_role="Preferences"] floating enable
-for_window [window_type="dialog"] floating enable
-for_window [window_type="menu"] floating enable
-for_window [title="."] title_format " %title"
-for_window [title="^float$"] floating enable
-for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable
-for_window [title="(?:Choose Files)"] floating enable
-for_window [title="(?:Copying)"] floating enable
-for_window [title="mpv"] floating enable, resize set 900 600
-for_window [class="Lxappearance"] floating enable, resize set 900 600
-for_window [class="Viewnior"] floating enable
-for_window [class="Brave"] move to workspace number 2
-for_window [class="Spotify"] move to workspace number 4
-for_window [class="discord"] move to workspace number 5
-for_window [app_id="engrampa"] floating enable
-for_window [app_id="termfloat"] floating enable
-for_window [app_id="pavucontrol"] floating enable, resize set 900 600
-for_window [app_id="thunar"] floating enable
-for_window [app_id="(?:Kotatogram_Desktop)"] move to workspace number 3
-
+  for_window {
+    [window_role="pop-up"] floating enable
+    [window_role="bubble"] floating enable
+    [window_role="task_dialog"] floating enable
+    [window_role="Preferences"] floating enable
+    [window_type="dialog"] floating enable
+    [window_type="menu"] floating enable
+    [title="."] title_format " %title"
+    [title="^float$"] floating enable
+    [title="(?:Open|Save) (?:File|Folder|As)"] floating enable
+    [title="(?:Choose Files)"] floating enable
+    [title="(?:Copying)"] floating enable
+    [title="mpv"] floating enable, resize set 900 600
+    [class="Lxappearance"] floating enable, resize set 900 600
+    [class="Viewnior"] floating enable
+    [class="Brave"] move to workspace number 2
+    [class="Spotify"] move to workspace number 4
+    [class="discord"] move to workspace number 5
+    [app_id="engrampa"] floating enable
+    [app_id="termfloat"] floating enable
+    [app_id="thunar"] floating enable
+    [app_id="(?:Kotatogram_Desktop)"] move to workspace number 3
+  }
 # Cursor theme
-seat seat0 xcursor_theme WhiteSur-cursors 27
+seat seat0 xcursor_theme WhiteSur-cursors 28
 
 # Gaps and borders
 gaps inner 10
@@ -203,21 +205,26 @@ client.focused_inactive $inactive  $inactive  $normal  $inactive  $inactive
 client.unfocused        $unfocused $unfocused #a0a0a0  $unfocused $unfocused
 client.urgent           #c49ec4    #c49ec4    $inactive
 
-font pango:SF Mono Semibold 15px
+font pango:DM Sans Bold 15px
 
 # Autostart
-exec xwayland enable
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec_always ~/.config/gtk-3.0/import-gsettings.sh &
-exec swaybg -i ~/Pictures/wallpapers/guts.jpg -m fill &
-exec ~/.config/waybar/launch.sh &
-exec dunst &
-exec xrdb -load ~/.Xresources &
-exec wl-paste --watch cliphist store &
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-exec spotify &
-exec kotatogram-desktop &
-exec thunar --daemon
+  exec {
+    xwayland enable
+    systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+    dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+    swaybg -i ~/Pictures/wallpapers/guts.jpg -m fill &
+    ~/.config/waybar/launch.sh &
+    dunst &
+    xrdb -load ~/.Xresources &
+    wl-paste --watch cliphist store &
+    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+    spotify &
+    kotatogram-desktop &
+    thunar --daemon
+  }
+
+  exec_always {
+    ~/.config/gtk-3.0/import-gsettings.sh &
+  }
 
 include /etc/sway/config.d/*

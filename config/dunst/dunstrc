@@ -22,9 +22,9 @@ progress_bar_min_width = 0
 progress_bar_max_width = 300
 progress_bar_frame_width = 0
 
-font = "SF Pro Medium 10.5"
+font = "DM Sans Medium 11"
 
-format = "<span size='115%' font_desc='SF Pro' style='normal' weight='600' foreground='#c49ec4'>%s</span>\n%b"
+format = "<span size='115%' font_desc='DM Sans' style='normal' weight='600' foreground='#c49ec4'>%s</span>\n%b"
 
 alignment = center
 markup = full

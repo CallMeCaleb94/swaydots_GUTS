@@ -175,7 +175,7 @@ bindsym $mod+alt+l exec lock
     [title="(?:Choose Files)"] floating enable
     [title="(?:Copying)"] floating enable
     [title="mpv"] floating enable, resize set 900 600
-    [class="Lxappearance"] floating enable, resize set 900 600
+    [class="Lxappearance"] floating enable
     [class="Viewnior"] floating enable
     [class="Brave"] move to workspace number 2
     [class="Spotify"] move to workspace number 4
@@ -186,7 +186,7 @@ bindsym $mod+alt+l exec lock
     [app_id="(?:Kotatogram_Desktop)"] move to workspace number 3
   }
 # Cursor theme
-seat seat0 xcursor_theme WhiteSur-cursors 28
+seat seat0 xcursor_theme WhiteSur-cursors 27
 
 # Gaps and borders
 gaps inner 10
@@ -205,7 +205,7 @@ client.focused_inactive $inactive  $inactive  $normal  $inactive  $inactive
 client.unfocused        $unfocused $unfocused #a0a0a0  $unfocused $unfocused
 client.urgent           #c49ec4    #c49ec4    $inactive
 
-font pango:DM Sans Bold 15px
+font pango:Roboto Slab Bold 15px
 
 # Autostart
   exec {

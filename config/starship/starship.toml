@@ -33,7 +33,7 @@ disabled = false
 style = "fg:#f0f0f0 bg:#262626"
 
 [directory]
-format = " [](fg:#262626 bg:none)[$path ]($style)[](fg:#6791c9 bg:#262626)[ ](fg:#262626 bg:#6791c9)[](fg:#6791c9 bg:none)"
+format = " [](fg:#262626 bg:none)[$path ]($style)[](fg:#6791c9 bg:#262626)[](fg:#262626 bg:#6791c9)[](fg:#6791c9 bg:none)"
 style = "fg:#f0f0f0 bg:#262626"
 truncation_length = 3
 truncate_to_repo=false

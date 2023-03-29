@@ -29,14 +29,15 @@ disabled = false
 [cmd_duration]
 min_time = 1
 format = " [](fg:#262626 bg:none)[$duration ]($style)[](fg:#9ec49f bg:#262626)[󰞌](fg:#262626 bg:#9ec49f)[](fg:#9ec49f bg:none)"
-disabled = false
+disabled = true
 style = "fg:#f0f0f0 bg:#262626"
 
 [directory]
-format = " [](fg:#262626 bg:none)[$path ]($style)[](fg:#6791c9 bg:#262626)[](fg:#262626 bg:#6791c9)[](fg:#6791c9 bg:none)"
+format = " [](fg:#262626 bg:none)[$path ]($style)[](fg:#6791c9 bg:#262626)[󰍎](fg:#262626 bg:#6791c9)[](fg:#6791c9 bg:none)"
 style = "fg:#f0f0f0 bg:#262626"
 truncation_length = 3
 truncate_to_repo=false
+disabled = false
 
 [git_branch]
 format = " [](fg:#262626 bg:none)[$branch ]($style)[](fg:#c4c19e bg:#262626)[󰘬](fg:#262626 bg:#c4c19e)[](fg:#c4c19e bg:none)"

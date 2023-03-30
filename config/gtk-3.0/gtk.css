@@ -7,3 +7,19 @@ headerbar:backdrop {
   color: #e7e7e7;
   background-color: #0f0f0f ;
 }
+
+/* remove window title from Client-Side Decorations */
+.solid-csd headerbar .title {
+    font-size: 0;
+}
+
+/* hide extra window decorations/double border */
+window decoration {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+* {
+  text-shadow: none;
+}

@@ -40,7 +40,7 @@ truncate_to_repo=false
 disabled = false
 
 [git_branch]
-format = " [](fg:#262626 bg:none)[$branch ]($style)[](fg:#c4c19e bg:#262626)[󰘬](fg:#262626 bg:#c4c19e)[](fg:#c4c19e bg:none)"
+format = " [](fg:#262626 bg:none)[$branch ]($style)[](fg:#ceb188 bg:#262626)[󰘬](fg:#262626 bg:#ceb188)[](fg:#ceb188 bg:none)"
 style = "fg:#f0f0f0 bg:#262626"
 
 [git_status]

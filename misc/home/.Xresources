@@ -25,8 +25,8 @@ Xft.dpi:        96
 *color10:    #9ec49f
 
 ! yellow
-*color3:     #aca98a
-*color11:    #c4c19e
+*color3:     #c6a679
+*color11:    #ceb188
 
 ! purple
 *color4:     #8f8aac
@@ -37,7 +37,7 @@ Xft.dpi:        96
 *color13:    #c49ec4
 
 ! blue
-*color6:     #8aabac
+*color6:     #8aacab
 *color14:    #9ec3c4
 
 ! white

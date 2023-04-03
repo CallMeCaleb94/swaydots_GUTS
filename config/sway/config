@@ -191,13 +191,18 @@ seat seat0 xcursor_theme WhiteSur-cursors 27
 # Gaps and borders
 gaps inner 10
 gaps outer 40
-default_border pixel 5
-default_floating_border pixel 5 
+default_border pixel 4
+default_floating_border pixel 4 
+
+corner_radius 12
+shadows on
+shadow_blur_radius 15
+shadow_color #0000007F
 
 # Window Colors
-set $unfocused  #262626
-set $normal     #4c4c4c
-set $inactive   #191919
+set $unfocused  #151515
+set $normal     #303030
+set $inactive   #151515
 
 # colors                border     bg         text     indicator  chld_brdr
 client.focused          $normal    $normal    #e7e7e7  $normal    $normal

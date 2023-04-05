@@ -231,4 +231,4 @@ font pango:Roboto Mono Bold 15px
     ~/.config/gtk-3.0/import-gsettings &
   }
 
-include /etc/sway/config.d/*
+include /etc/sway/config.d/*ls

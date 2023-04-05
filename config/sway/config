@@ -226,10 +226,7 @@ font pango:Roboto Slab Bold 15px
     spotify &
     kotatogram-desktop &
     thunar --daemon
-  }
-
-  exec_always {
-    ~/.config/gtk-3.0/import-gsettings.sh &
+    xsettingsd &
   }
 
 include /etc/sway/config.d/*

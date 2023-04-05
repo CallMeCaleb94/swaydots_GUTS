@@ -175,7 +175,6 @@ bindsym $mod+alt+l exec lock
     [title="(?:Choose Files)"] floating enable
     [title="(?:Copying)"] floating enable
     [title="mpv"] floating enable, resize set 900 600
-    [class="Lxappearance"] floating enable
     [class="Viewnior"] floating enable
     [class="Brave"] move to workspace number 2
     [class="Spotify"] move to workspace number 4
@@ -183,7 +182,7 @@ bindsym $mod+alt+l exec lock
     [app_id="engrampa"] floating enable
     [app_id="termfloat"] floating enable
     [app_id="thunar"] floating enable
-    [app_id="(?:Kotatogram_Desktop)"] move to workspace number 3
+    [app_id="(?:Telegram_Desktop)"] move to workspace number 3
   }
 # Cursor theme
 seat seat0 xcursor_theme WhiteSur-cursors 27
@@ -224,9 +223,12 @@ font pango:Roboto Slab Bold 15px
     wl-paste --watch cliphist store &
     /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
     spotify &
-    kotatogram-desktop &
+    telegram-desktop &
     thunar --daemon
-    xsettingsd &
   }
+
+  exec_always {
+      ~/.config/gtk-3.0/import-gsettings &
+    }
 
 include /etc/sway/config.d/*

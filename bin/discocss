@@ -11,30 +11,38 @@ touch "$cssFile"
 cat <<EOF > "$preloadFile"
 module.exports = () => {
   const fs = require("fs");
+  const electron = require("electron");
   const confDir = "$confdir";
   const cssFile = "$cssFile";
-
-  function reload(style) {
-    style.innerHTML = fs.readFileSync(cssFile);
+  function reload() {
+    const css = fs.readFileSync(cssFile, { encoding: "utf-8" });
+    electron.webFrame.executeJavaScript(\`
+      (() => {
+        let loaded = false;
+        function load() {
+          if (loaded) return;
+          const disco = document.createElement("style");
+          disco.id = "disco";
+          disco.innerHTML = \${JSON.stringify(css)};
+          document.getElementById('disco')?.remove();
+          document.head.appendChild(disco);
+          loaded = true;
+        }
+        window.addEventListener("load", () => {
+          load();
+        });
+        try {
+          load();
+        } catch (e) {}
+      })();
+    \`);
   }
-
-  function inject({ document, window }) {
-    window.addEventListener("load", () => {
-      const style = document.createElement("style");
-      reload(style);
-      document.head.appendChild(style);
-
-      fs.watch(confDir, {}, () => reload(style));
-    });
-  }
-
-  inject(require("electron").webFrame.context);
+  reload();
+  fs.watch(confDir, {}, () => reload());
 };
-
 module.exports.mw = (mainWindow) => {
   mainWindow.setBackgroundColor("#00000000");
 };
-
 module.exports.mo = (options) => {
   options.transparent = true;
   if (process.platform === "linux") {
@@ -60,5 +68,11 @@ causing_the_window_replace='s|// causing the window to be too small on a larger 
 LC_ALL=C sed $sed_options "$app_preload_replace; $launch_main_app_replace; $frame_true_replace; $causing_the_window_replace" \
   "$core_asar"
 
-command -v discord && exec discord
-command -v Discord && exec Discord
+discordBin="$DISCOCSS_DISCORD_BIN"
+if [ "$discordBin" ]; then
+  unset DISCOCSS_DISCORD_BIN
+  exec "$discordBin"
+else
+  command -v discord && exec discord
+  command -v Discord && exec Discord
+fi

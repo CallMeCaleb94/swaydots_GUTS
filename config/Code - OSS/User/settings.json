@@ -62,7 +62,7 @@
     "CSS"
   ],
   "files.autoSave": "afterDelay",
-  "editor.fontFamily": "'Iosevka', 'Font Awesome 6 Pro Solid', 'Material Design Icons'",
+  "editor.fontFamily": "'Iosevka', 'Font Awesome 6 Pro Solid', 'Material Icons'",
   "workbench.colorTheme": "Visual Studio Dark",
   "editor.minimap.enabled": false,
 }

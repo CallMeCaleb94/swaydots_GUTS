@@ -209,7 +209,7 @@ client.focused_inactive $inactive  $inactive  $normal  $inactive  $inactive
 client.unfocused        $unfocused $unfocused #a0a0a0  $unfocused $unfocused
 client.urgent           #c49ec4    #c49ec4    $inactive
 
-font pango:Roboto Slab Bold 15px
+font pango:Roboto Mono Bold 15px
 
 # Autostart
   exec {
@@ -228,7 +228,7 @@ font pango:Roboto Slab Bold 15px
   }
 
   exec_always {
-      ~/.config/gtk-3.0/import-gsettings &
-    }
+    ~/.config/gtk-3.0/import-gsettings &
+  }
 
 include /etc/sway/config.d/*

@@ -119,7 +119,7 @@ tooltip_text = str.format(
 # print waybar module data
 out_data = {
     'text': f'<span font_desc="Font Awesome 6 Pro Solid 14">{icon}</span>  <span weight="600" style="normal" font="12">{temp}C</span>',
-    'alt': f'<span font_desc="Font Awesome 6 Pro Solid 14">{icon}</span>  <span weight="600" style="normal" font="12">{status}</span>',
+    'alt': f'<span font_desc="Font Awesome 6 Pro Solid 14">{icon}</span>  <span weight="600" style="normal" font="12">{status}, {temp}C</span>',
     'tooltip': tooltip_text,
     'class': status_code
 }

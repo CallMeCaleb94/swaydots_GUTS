@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 date="$(date +'%Y-%m-%d_%H:%M')"
-dir="$HOME/Pictures/Screenshots"
+dir="$HOME/Pictures/screenshots"
 pic="$dir/$date.png"
 
 [ ! -d "$dir" ] && mkdir -pv "$dir"
@@ -14,11 +14,11 @@ case "$1" in
     full)
       full || abort
       wl-copy < "$pic"
-      dunstify -u normal -i "$pic" "Sauced!" $pic
+      dunstify -u normal -i "$pic" "Saved!" $pic
       ;;
     crop)
       crop || abort
       wl-copy < "$pic" 
-      dunstify -u normal -i "$pic" "Sauced!" $pic
+      dunstify -u normal -i "$pic" "Saved!" $pic
       ;;
 esac

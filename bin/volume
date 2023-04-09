@@ -3,11 +3,11 @@
 DIR="$HOME/.config/dunst/icons"
 
 function get_volume {
-      amixer -D pulse get Master | grep '%' | head -n 1 | awk -F'[' '{print $2}' | awk -F'%' '{print $1}'
+    amixer -D pulse get Master | grep '%' | head -n 1 | awk -F'[' '{print $2}' | awk -F'%' '{print $1}'
 }
 
 function is_mute {
-      amixer -D pulse get Master | grep '%' | grep -oE '[^ ]+$' | grep off
+    amixer -D pulse get Master | grep '%' | grep -oE '[^ ]+$' | grep off
 }
 
 function send_notification {

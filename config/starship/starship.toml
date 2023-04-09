@@ -6,12 +6,14 @@
 ## rxyhn's starship based configuration
 ## The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 
-format = "($all)"
-right_format = """$git_branch$git_status$cmd_duration$directory"""
+format = """$directory
+$character
+"""
+right_format = """$git_branch$git_status$cmd_duration"""
 
 # Disable the blank line at the start of the prompt
 add_newline = false
-#command_timeout = 2000
+command_timeout = 5000
 
 [line_break]
 disabled = true
@@ -33,8 +35,9 @@ disabled = true
 style = "fg:#f0f0f0 bg:#262626"
 
 [directory]
-format = " [](fg:#262626 bg:none)[$path ]($style)[](fg:#6791c9 bg:#262626)[󰍎](fg:#262626 bg:#6791c9)[](fg:#6791c9 bg:none)"
-style = "fg:#f0f0f0 bg:#262626"
+#format = " [](fg:#262626 bg:none)[$path ]($style)[](fg:#6791c9 bg:#262626)[󰍎](fg:#262626 bg:#6791c9)[](fg:#6791c9 bg:none)"
+#style = "fg:#f0f0f0 bg:#262626"
+format = "[$path](bold green)"
 truncation_length = 3
 truncate_to_repo=false
 disabled = false
@@ -49,10 +52,10 @@ style = "fg:#f0f0f0 bg:#262626"
 conflicted = "="
 ahead =	"󱦲${count} "
 behind = "󱦳${count} "
-diverged = "󱦲${ahead_count} 󱦳$${behind_count} "
-up_to_date = "󰄬 "
+diverged = "󱦲${ahead_count} 󱦳${behind_count} "
+up_to_date = "󰄭  "
 untracked = "?${count} "
-stashed = "󰏖"
+stashed = "󰏖 "
 modified = "!${count} "
 staged = "+${count} "
 renamed = "»${count} "

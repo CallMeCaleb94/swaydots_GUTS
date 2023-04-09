@@ -156,7 +156,7 @@ bindsym $mod+bracketright exec ~/.config/waybar/launch.sh &
 bindsym $mod+bracketleft exec ~/.config/dunst/launch.sh
 
 # Color Picker
-bindsym $mod+Shift+p exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
+bindsym $mod+Shift+p exec colorpicker
 
 # Lock
 bindsym $mod+alt+l exec lock
@@ -192,9 +192,11 @@ gaps inner 10
 gaps outer 40
 default_border pixel 4
 default_floating_border pixel 4 
-
 corner_radius 12
+
+# shadows
 shadows on
+shadows_on_csd on
 shadow_blur_radius 15
 shadow_color #0000007F
 
@@ -202,20 +204,19 @@ shadow_color #0000007F
 set $unfocused  #151515
 set $normal     #303030
 set $inactive   #151515
+set $accent     #c49ec4
 
 # colors                border     bg         text     indicator  chld_brdr
 client.focused          $normal    $normal    #e7e7e7  $normal    $normal
-client.focused_inactive $inactive  $inactive  $normal  $inactive  $inactive
-client.unfocused        $unfocused $unfocused #a0a0a0  $unfocused $unfocused
-client.urgent           #c49ec4    #c49ec4    $inactive
+client.focused_inactive $inactive  $inactive  #e7e7e7  $inactive  $inactive
+client.unfocused        $unfocused $unfocused #767676  $unfocused $unfocused
+client.urgent           $accent    $accent    $inactive
 
-font pango:Roboto Mono Bold 15px
+font pango:Roboto Medium 14px
 
 # Autostart
   exec {
     xwayland enable
-    systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-    dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
     swaybg -i ~/Pictures/wallpapers/guts.jpg -m fill &
     ~/.config/waybar/launch.sh &
     dunst &
@@ -231,4 +232,4 @@ font pango:Roboto Mono Bold 15px
     ~/.config/gtk-3.0/import-gsettings &
   }
 
-include /etc/sway/config.d/*ls
+include /etc/sway/config.d/*

@@ -196,7 +196,7 @@ corner_radius 12
 
 # shadows
 shadows on
-shadows_on_csd on
+shadows_on_csd false
 shadow_blur_radius 15
 shadow_color #0000007F
 

@@ -11,7 +11,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "explorer.confirmDelete": false,
   "files.autoSave": "afterDelay",
-  "editor.fontFamily": "'Sarasa Mono CL', 'Font Awesome 6 Pro Solid', 'Material Icons'",
+  "editor.fontFamily": "'Sarasa Mono CL', 'Font Awesome 6 Pro Solid'",
   "editor.minimap.enabled": false,
   "colorize.include": [
     "**/*.*"
@@ -23,10 +23,10 @@
     "comments": "#4c4c4c",
     "strings": "#9ec49f",
     "functions": "#a39ec4",
-    "variables": "#9ec49f",
+    "variables": "#cacaca",
     "keywords": "#ceb188",
     "types": "#c49ea0",
-    "numbers": "#cacaca",
+    "numbers": "#ceb188",
     "textMateRules": [
       {
         "scope": "keyword.operator",
